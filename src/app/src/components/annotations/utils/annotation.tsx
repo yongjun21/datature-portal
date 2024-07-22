@@ -8,6 +8,8 @@
  */
 import * as L from "leaflet";
 
+import { createCustomBitmapLayer } from "@portal/components/annotations/CustomBitmapLayer";
+
 import {
   PrimitiveShapeOptions,
   TagColours,
@@ -126,7 +128,7 @@ export function RenderAssetAnnotations(
       /* Mask and Polygon are synonymous */
       case "polygon":
       case "masks":
-        PrimitiveObject = L.polygon;
+        PrimitiveObject = createCustomBitmapLayer;
         break;
       default:
         PrimitiveObject = L.rectangle;
