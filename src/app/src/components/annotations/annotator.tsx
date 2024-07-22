@@ -327,6 +327,7 @@ export default class Annotator extends Component<
       attributionControl: false,
       zoomControl: false,
       doubleClickZoom: false,
+      renderer: L.canvas(),
     }).setView(Coordinate(5000, 5000), 0);
 
     this.annotationGroup.addTo(this.map);
